@@ -37,7 +37,7 @@ class Employee {
 
 class Park {
 
-    class Attraction {
+    static class Attraction {
         private String name;
         private String operatingHours;
         private double cost;
@@ -56,8 +56,10 @@ class Park {
             System.out.println();
         }
     }
+}
 
-    public static void main(String[] args) {
+public class Lesson4 {
+    public void main(String[] args) {
 
         Employee[] employees = new Employee[5];
         employees[0] = new Employee("Andrey Aleksandrov", "Engineer", "aleksandrov@mailbox.com", "892312312", 30000, 30);
@@ -76,9 +78,9 @@ class Park {
 
 
         Park park = new Park();
-        Park.Attraction attraction1 = park.new Attraction("Карусель", "10:00 - 20:00", 500);
-        Park.Attraction attraction2 = park.new Attraction("Горка", "11:00 - 19:00", 300);
-        Park.Attraction attraction3 = park.new Attraction("Колесо обозрения", "09:00 - 21:00", 800);
+        Park.Attraction attraction1 = new Park.Attraction("Карусель", "10:00 - 20:00", 500);
+        Park.Attraction attraction2 = new Park.Attraction("Горка", "11:00 - 19:00", 300);
+        Park.Attraction attraction3 = new Park.Attraction("Колесо обозрения", "09:00 - 21:00", 800);
 
 
         System.out.println("Информация об аттракционах в парке:");
