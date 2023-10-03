@@ -19,12 +19,13 @@ public class Box<T extends Fruit> {
         return weight;
     }
 
-    public static class FruitComparator implements Comparator<Box<? extends Fruit>> {
-        @Override
-        public int compare(Box<? extends Fruit> box1, Box<? extends Fruit> box2) {
-            float weight1 = box1.getWeight();
-            float weight2 = box2.getWeight();
-            return Float.compare(weight1, weight2);
+    public boolean compare(Box box) {
+        float weight1 = this.getWeight();
+        float weight2 = box.getWeight();
+        if (weight1 > weight2) {
+            return true;
+        } else {
+            return false;
         }
     }
 

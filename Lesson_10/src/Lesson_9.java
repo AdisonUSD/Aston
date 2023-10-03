@@ -19,9 +19,8 @@ public class Lesson_9 {
 
         boxApple.getWeight();
         boxOrange.getWeight();
-        Box.FruitComparator comparator = new Box.FruitComparator();
-        int result = comparator.compare(boxOrange, boxApple);
-        System.out.println("Comparison result: " + result);
+        boolean res = boxApple.compare(boxOrange);
+        System.out.println(res);
 
 
     }
